@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col v-for="result in results" :key="result.id" lg="2">
+      <v-col v-for="result in results" :key="result.id" cols="3">
         <result :result="result"></result>
       </v-col>
     </v-row>
