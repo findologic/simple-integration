@@ -5,6 +5,10 @@
         <result :result="result"></result>
       </v-col>
     </v-row>
+
+    <v-overlay :value="isLoading">
+      <v-progress-circular color="primary" indeterminate></v-progress-circular>
+    </v-overlay>
   </v-container>
 </template>
 
@@ -19,6 +23,7 @@ export default {
     return {
       results: [],
       shopkey: SHOPKEY,
+      isLoading: false,
     };
   },
   mounted() {
@@ -26,10 +31,14 @@ export default {
   },
   methods: {
     async search(query) {
+      this.isLoading = true;
+
       let params = new URLSearchParams({ outputAdapter: 'JSON_1.0', query });
       let response = await fetch(`https://service.findologic.com/ps/centralized-frontend/${this.shopkey}/search?${params}`);
       let json = await response.json();
       this.results = json.result.items;
+
+      this.isLoading = false;
     }
   },
   props: {
@@ -41,7 +50,7 @@ export default {
   },
   watch: {
     async query(query) {
-      this.search(query);
+      await this.search(query);
     }
   }
 };

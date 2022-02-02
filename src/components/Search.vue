@@ -33,15 +33,11 @@ export default {
       this.isLoading = true;
 
       let params = new URLSearchParams({ type: 'result_v4', 'autocompleteblocks[]': ['suggest'], query, });
-      try {
-        let response = await fetch(`https://service.findologic.com/ps/centralized-frontend/${this.shopkey}/suggest?${params}`);
-        let json = await response.json();
-        this.items = json.textSuggestions.map(suggestion => suggestion.text);
-      } catch (e) {
-        console.error(e);
-      } finally {
-        this.isLoading = false;
-      }
+      let response = await fetch(`https://service.findologic.com/ps/centralized-frontend/${this.shopkey}/suggest?${params}`);
+      let json = await response.json();
+      this.items = json.textSuggestions.map(suggestion => suggestion.text);
+
+      this.isLoading = false;
     },
     onSelect(query) {
       this.$router.push(`/search/${query ?? ''}`);
