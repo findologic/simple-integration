@@ -1,9 +1,11 @@
 <template>
-  <v-row>
-    <v-col v-for="result in results" :key="result.id" lg="2">
-      <result :result="result"></result>
-    </v-col>
-  </v-row>
+  <v-container>
+    <v-row>
+      <v-col v-for="result in results" :key="result.id" lg="2">
+        <result :result="result"></result>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
