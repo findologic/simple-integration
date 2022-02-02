@@ -1,6 +1,6 @@
 <template>
   <v-card class="fill-height">
-    <v-img contain height="250" :src="result.imageUrl"></v-img>
+    <v-img :src="result.imageUrl" contain height="250"></v-img>
     <v-card-title><a :href="result.url">{{ result.name }}</a></v-card-title>
     <v-card-text>€ {{ result.price }}</v-card-text>
   </v-card>

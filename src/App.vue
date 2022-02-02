@@ -1,24 +1,22 @@
 <template>
-  <div id="app">
-    <v-app>
-      <v-app-bar app>
-        <v-toolbar-title>
-          <router-link to="/">
-            <v-img src="Findologic Logo claim schwarz RBG.png" alt="FINDOLOGIC: Stop search – find!"
-                   max-width="150"></v-img>
-          </router-link>
-        </v-toolbar-title>
-        <v-spacer></v-spacer>
-        <search></search>
-        <v-spacer></v-spacer>
-      </v-app-bar>
-      <v-main>
-        <v-container>
-          <router-view/>
-        </v-container>
-      </v-main>
-    </v-app>
-  </div>
+  <v-app id="app">
+    <v-app-bar app>
+      <v-toolbar-title>
+        <router-link to="/">
+          <v-img alt="FINDOLOGIC: Stop search – find!" max-width="150"
+                 src="Findologic Logo claim schwarz RBG.png"></v-img>
+        </router-link>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <search></search>
+      <v-spacer></v-spacer>
+    </v-app-bar>
+    <v-main>
+      <v-container>
+        <router-view/>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>

@@ -1,29 +1,32 @@
 <template>
   <v-combobox
-      filled rounded
-      hide-details
-      clearable
-      autofocus
-      name="query"
-      :items="items"
-      :loading="isLoading"
+      :items="items" :loading="isLoading"
       :search-input.sync="query"
+      :value="$route.params.query"
+      append-icon=""
+      autofocus
+      clearable
+      dense
+      filled
+      hide-details
+      name="query"
       placeholder="Start typing to Search"
       prepend-inner-icon="mdi-magnify"
-      append-icon=""
+      rounded
       @input="onSelect"
-      :value="$route.params.query"
   ></v-combobox>
 </template>
 
 <script>
+import { SHOPKEY } from '@/main';
+
 export default {
   name: 'Search',
   data: () => ({
     items: [],
     isLoading: false,
     query: '',
-    shopkey: '44AC62C6BA528CADABDDB18F9F3D2145',
+    shopkey: SHOPKEY,
   }),
   methods: {
     async suggest(query) {

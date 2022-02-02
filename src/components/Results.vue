@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col :key="result.id" v-for="result in results" lg="2">
+    <v-col v-for="result in results" :key="result.id" lg="2">
       <result :result="result"></result>
     </v-col>
   </v-row>
@@ -8,6 +8,7 @@
 
 <script>
 import Result from '@/components/Result';
+import { SHOPKEY } from '@/main';
 
 export default {
   name: 'Results',
@@ -15,7 +16,7 @@ export default {
   data() {
     return {
       results: [],
-      shopkey: '44AC62C6BA528CADABDDB18F9F3D2145',
+      shopkey: SHOPKEY,
     };
   },
   mounted() {
