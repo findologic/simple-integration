@@ -30,13 +30,12 @@ export default {
     this.search(this.query);
   },
   methods: {
+    // eslint-disable-next-line no-unused-vars
     async search(query) {
       this.isLoading = true;
 
-      let params = new URLSearchParams({ outputAdapter: 'JSON_1.0', query });
-      let response = await fetch(`https://service.findologic.com/ps/centralized-frontend/${this.shopkey}/search?${params}`);
-      let json = await response.json();
-      this.results = json.result.items;
+      // TODO: Fetch search results from API
+      this.results = Array(5).fill({});
 
       this.isLoading = false;
     }

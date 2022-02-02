@@ -30,13 +30,12 @@ export default {
     shopkey: SHOPKEY,
   }),
   methods: {
+    // eslint-disable-next-line no-unused-vars
     async suggest(query) {
       this.isLoading = true;
 
-      let params = new URLSearchParams({ type: 'result_v4', 'autocompleteblocks[]': ['suggest'], query, });
-      let response = await fetch(`https://service.findologic.com/ps/centralized-frontend/${this.shopkey}/suggest?${params}`);
-      let json = await response.json();
-      this.items = json.textSuggestions.map(suggestion => suggestion.text);
+      // TODO: Fetch suggestions from API
+      this.items = [];
 
       this.isLoading = false;
     },
