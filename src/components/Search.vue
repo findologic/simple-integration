@@ -1,5 +1,7 @@
 <template>
   <v-autocomplete
+      filled rounded
+      hide-details
       name="query"
       :items="items"
       :loading="isLoading"
@@ -7,7 +9,8 @@
       hide-no-data
       item-value="API"
       placeholder="Start typing to Search"
-      append-icon="mdi-magnify"
+      prepend-inner-icon="mdi-magnify"
+      append-icon=""
       @input="onSelect"
       @keydown.enter.prevent="onSearch"
   ></v-autocomplete>

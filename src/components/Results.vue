@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <v-row>
-      <v-col :key="result.id" v-for="result in results" cols="2">
-        <result :result="result"></result>
-      </v-col>
-    </v-row>
-  </div>
+  <v-row>
+    <v-col :key="result.id" v-for="result in results" cols="2" >
+      <result :result="result"></result>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -21,7 +19,7 @@ export default {
     };
   },
   mounted() {
-    this.search(this.query)
+    this.search(this.query);
   },
   methods: {
     async search(query) {
@@ -40,7 +38,7 @@ export default {
   },
   watch: {
     async query(query) {
-      this.search(query)
+      this.search(query);
     }
   }
 };

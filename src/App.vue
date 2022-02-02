@@ -2,21 +2,15 @@
   <div id="app">
     <v-app>
       <v-app-bar app>
-        <v-container>
-          <v-row>
-            <v-col cols="6">
-              <v-toolbar-title>
-                <router-link to="/">
-                  <!--                <v-img src="Findologic Logo claim schwarz RBG.png" alt="FINDOLOGIC: Stop search – find!" contain height="50%"></v-img>-->
-                  FINDOLOGIC
-                </router-link>
-              </v-toolbar-title>
-            </v-col>
-            <v-col cols="6">
-              <search></search>
-            </v-col>
-          </v-row>
-        </v-container>
+        <v-toolbar-title>
+          <router-link to="/">
+            <v-img src="Findologic Logo claim schwarz RBG.png" alt="FINDOLOGIC: Stop search – find!"
+                   max-width="150"></v-img>
+          </router-link>
+        </v-toolbar-title>
+        <v-spacer></v-spacer>
+        <search></search>
+        <v-spacer></v-spacer>
       </v-app-bar>
       <v-main>
         <v-container>
