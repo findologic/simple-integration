@@ -4,7 +4,7 @@
       <v-toolbar-title>
         <router-link to="/">
           <v-img alt="FINDOLOGIC: Stop search – find!" max-width="150"
-                 src="Findologic Logo claim schwarz RBG.png"></v-img>
+                 src="findologic.png"></v-img>
         </router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
