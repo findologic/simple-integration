@@ -1,8 +1,8 @@
 <template>
   <v-card class="fill-height">
-    <v-img :src="result.imageUrl" contain height="250"></v-img>
-    <v-card-title><a :href="result.url">{{ result.name }}</a></v-card-title>
-    <v-card-text>€ {{ result.price }}</v-card-text>
+    <v-img contain height="250" src="findologic.png"></v-img>
+    <v-card-title><a href="https://example.com">Awesome Product</a></v-card-title>
+    <v-card-text>€ 8.15</v-card-text>
   </v-card>
 </template>
 
