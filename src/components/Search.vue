@@ -1,16 +1,18 @@
 <template>
   <v-combobox
-      v-model="query"
       filled rounded
       hide-details
       clearable
+      autofocus
       name="query"
       :items="items"
       :loading="isLoading"
+      :search-input.sync="query"
       placeholder="Start typing to Search"
       prepend-inner-icon="mdi-magnify"
       append-icon=""
       @input="onSelect"
+      :value="$route.params.query"
   ></v-combobox>
 </template>
 
@@ -39,7 +41,6 @@ export default {
       }
     },
     onSelect(query) {
-      console.log('onSelect', query);
       this.$router.push(`/search/${query ?? ''}`);
     },
   },
