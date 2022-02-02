@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col :key="result.id" v-for="result in results" cols="2" >
+    <v-col :key="result.id" v-for="result in results" lg="2">
       <result :result="result"></result>
     </v-col>
   </v-row>

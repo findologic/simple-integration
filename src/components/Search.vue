@@ -1,26 +1,23 @@
 <template>
-  <v-autocomplete
+  <v-combobox
+      v-model="query"
       filled rounded
       hide-details
+      clearable
       name="query"
       :items="items"
       :loading="isLoading"
-      :search-input.sync="query"
-      hide-no-data
-      item-value="API"
       placeholder="Start typing to Search"
       prepend-inner-icon="mdi-magnify"
       append-icon=""
       @input="onSelect"
-      @keydown.enter.prevent="onSearch"
-  ></v-autocomplete>
+  ></v-combobox>
 </template>
 
 <script>
 export default {
   name: 'Search',
   data: () => ({
-    descriptionLimit: 60,
     items: [],
     isLoading: false,
     query: '',
@@ -34,18 +31,16 @@ export default {
       try {
         let response = await fetch(`https://service.findologic.com/ps/centralized-frontend/${this.shopkey}/suggest?${params}`);
         let json = await response.json();
-        this.items = json.textSuggestions;
+        this.items = json.textSuggestions.map(suggestion => suggestion.text);
       } catch (e) {
         console.error(e);
       } finally {
         this.isLoading = false;
       }
     },
-    onSearch($event) {
-      this.$router.push(`/search/${$event.target.value}`);
-    },
     onSelect(query) {
-      this.$router.push(`/search/${query}`);
+      console.log('onSelect', query);
+      this.$router.push(`/search/${query ?? ''}`);
     },
   },
   watch: {
