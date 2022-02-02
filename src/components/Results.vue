@@ -35,7 +35,7 @@ export default {
       this.isLoading = true;
 
       // TODO: Fetch search results from API
-      this.results = Array(5).fill({});
+      this.results = Array(3).fill({});
 
       this.isLoading = false;
     }
