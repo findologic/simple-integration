@@ -10,6 +10,7 @@
       filled
       hide-details
       name="query"
+      no-filter
       placeholder="Start typing to Search"
       prepend-inner-icon="mdi-magnify"
       rounded
