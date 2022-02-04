@@ -5,7 +5,7 @@ import router from './router';
 
 Vue.config.productionTip = false;
 
-export const SHOPKEY = '44AC62C6BA528CADABDDB18F9F3D2145';
+export const SHOPKEY = 'DBF2EE9DE465AAB69BCE510E71C5AC48';
 
 new Vue({
     vuetify,
