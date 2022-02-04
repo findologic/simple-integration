@@ -1,7 +1,9 @@
 <template>
   <v-card class="fill-height d-flex flex-column">
     <v-img :src="`https://www.fillmurray.com/250/${Math.round(Math.random()*200+100)}`" contain height="250"></v-img>
-    <v-card-title><a href="https://example.com">Awesome Product {{ (Math.random() * 10).toFixed(0) }}</a></v-card-title>
+    <v-card-title>
+      <a href="https://example.com">{{ $route.params.query }} Awesome Product {{ (Math.random() * 10).toFixed(0) }}</a>
+    </v-card-title>
     <v-card-text>€ {{ (Math.random() * 10).toFixed(2) }}</v-card-text>
     <v-card-actions>
       <v-spacer></v-spacer>
