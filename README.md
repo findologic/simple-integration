@@ -1,5 +1,11 @@
 # simple-integration
 
+A basic demo on how to integrate Findologic Search and Suggest into your JavaScript Singe Page App.
+
+See [branch `start`](https://github.com/findologic/simple-integration/tree/start) for the boilerplate code.
+
+See [branch `main`](https://github.com/findologic/simple-integration/tree/main) for the complete demo.
+
 ## Project setup
 
 ```
