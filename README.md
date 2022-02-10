@@ -6,6 +6,7 @@ A basic demo on how to integrate Findologic Search and Suggest into your JavaScr
 
 * See [🔧 branch `start`](https://github.com/findologic/simple-integration/tree/start) for the boilerplate code
 * See [🎉 branch `main`](https://github.com/findologic/simple-integration/tree/main) for the complete demo
+* See [📑 the branch comparison](https://github.com/findologic/simple-integration/compare/start...main) for the diff
 
 For more information check out the [⚙ Findologic API spec](https://service.findologic.com/ps/centralized-frontend/spec/)
 ️ and the [🤓 developer hub](https://www.findologic.com/en/developers/).
