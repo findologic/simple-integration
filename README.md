@@ -2,7 +2,7 @@
 
 # simple-integration
 
-A basic demo on how to integrate Findologic Search and Suggest API into your JavaScript Singe Page App.
+A basic demo on how to integrate the Findologic Search and Suggest APIs into your JavaScript Singe Page App.
 
 * See [🔧 branch `start`](https://github.com/findologic/simple-integration/tree/start) for the boilerplate code
 * See [🎉 branch `main`](https://github.com/findologic/simple-integration/tree/main) for the complete demo
